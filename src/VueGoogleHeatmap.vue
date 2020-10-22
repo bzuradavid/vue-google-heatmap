@@ -39,7 +39,7 @@ export default {
     },
     radius: {
       type: Number,
-      default: () => 30
+      default: () => 27
     }
   },
   computed: {
