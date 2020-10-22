@@ -36,6 +36,10 @@ export default {
     height: {
       type: [String, Number],
       default: () => '100%'
+    },
+    radius: {
+      type: Number,
+      default: () => 30
     }
   },
   computed: {
@@ -71,7 +75,8 @@ export default {
 
       this.$heatmap = new google.maps.visualization.HeatmapLayer({
         data: this.heatmapPoints,
-        map: this.$mapObject
+        map: this.$mapObject,
+        radius: this.radius
       });
 
       this.$heatmap.setMap(this.$mapObject);
