@@ -47,6 +47,10 @@ export default {
     dissipating: {
       type: Boolean,
       default: () => false,
+    },
+    gradient: {
+      type: Array,
+      required: false,
     }
   },
   computed: {
@@ -85,7 +89,8 @@ export default {
         map: this.$mapObject,
         radius: this.radius,
         opacity: this.opacity,
-        dissipating: this.dissipating
+        dissipating: this.dissipating,
+        gradient: this.gradient
       });
 
       this.$heatmap.setMap(this.$mapObject);
