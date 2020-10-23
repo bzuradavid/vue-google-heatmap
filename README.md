@@ -1,6 +1,6 @@
 ## Installation
 ```js
-yarn add vue-google-heatmap
+npm install bzuradavid/vue-google-heatmap#main
 ```
 
 You will need an Google Maps Javascript API Key. You can get one here: [Google Cloud Console](https://console.cloud.google.com/)
@@ -57,4 +57,5 @@ export default {
 | map-type | String | roadmap | Type of map, options: ['roadmap', 'satellite'] |
 | lat | Number | 37.775 | Map center latitude |
 | lng | Number | -122.434 | Map center longitude |
+| radius | Number | 27 | Heat Point Radius |
 | points | Array | [] | Points to generate Heatmap with, array of objects [{lat: 37.775, lng: -122.434}] |
