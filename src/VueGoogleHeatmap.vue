@@ -38,7 +38,7 @@ export default {
     },
     radius: {
       type: Number,
-      default: () => 27,
+      default: () => 5,
     },
     opacity: {
       type: Number,
