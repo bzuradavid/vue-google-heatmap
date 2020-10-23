@@ -44,6 +44,10 @@ export default {
       type: Number,
       default: () => 0.8,
     },
+    dissipating: {
+      type: Boolean,
+      default: () => false,
+    }
   },
   computed: {
     mapWidth() {
@@ -81,6 +85,7 @@ export default {
         map: this.$mapObject,
         radius: this.radius,
         opacity: this.opacity,
+        dissipating: this.dissipating
       });
 
       this.$heatmap.setMap(this.$mapObject);
