@@ -50,7 +50,7 @@ export default {
     },
     dissipating: {
       type: Boolean,
-      default: () => false,
+      default: () => true,
     },
     gradient: {
       type: Array,
