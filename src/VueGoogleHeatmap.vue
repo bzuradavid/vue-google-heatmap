@@ -26,11 +26,11 @@ export default {
     },
     points: {
       type: Array,
-      required: true,
+      default: () => [],
     },
     city_points: {
       type: Array,
-      required: true,
+      default: () => [],
     },
     width: {
       type: [String, Number],
