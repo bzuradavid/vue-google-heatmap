@@ -115,7 +115,7 @@ export default {
         map: this.$mapObject,
         radius: this.radius,
         opacity: this.opacity,
-        dissipating: this.dissipating,
+        // dissipating: this.dissipating,
         gradient: this.gradient
       });
 
