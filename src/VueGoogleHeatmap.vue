@@ -28,6 +28,10 @@ export default {
       type: Array,
       required: true,
     },
+    city_points: {
+      type: Array,
+      required: true,
+    },
     width: {
       type: [String, Number],
       default: () => "100%",
@@ -73,6 +77,11 @@ export default {
         (point) => new google.maps.LatLng(point.lat, point.lng)
       );
     },
+    cityPoints() {
+      return this.city_points.map(
+        (point) => new google.maps.LatLng(point.lat, point.lng)
+      );
+    }
   },
   created() {
     return loaded.then(() => {
@@ -83,6 +92,15 @@ export default {
         center: { lat: this.lat, lng: this.lng },
         mapTypeId: this.mapType,
       });
+
+      this.cityPoints.forEach(point => {
+        let myMarkerOptions = {
+          position: point,
+          map: mapElement
+        }
+
+        let myMarker = new google.maps.Marker(myMarkerOptions);
+      })
 
       this.$heatmap = new google.maps.visualization.HeatmapLayer({
         data: this.heatmapPoints,
