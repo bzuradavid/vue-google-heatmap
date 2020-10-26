@@ -86,8 +86,8 @@ export default {
   created() {
     return loaded.then(() => {
       const mapElement = this.$refs.map;
-
-      this.$mapObject = new google.maps.Map(mapElement, {
+      
+      let mapObj = this.$mapObject = new google.maps.Map(mapElement, {
         zoom: this.initialZoom,
         center: { lat: this.lat, lng: this.lng },
         mapTypeId: this.mapType,
@@ -96,7 +96,7 @@ export default {
       this.cityPoints.forEach(point => {
         let myMarkerOptions = {
           position: point,
-          map: mapElement
+          map: mapObj
         }
 
         let myMarker = new google.maps.Marker(myMarkerOptions);
