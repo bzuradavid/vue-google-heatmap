@@ -96,6 +96,14 @@ export default {
       this.cityPoints.forEach(point => {
         let myMarkerOptions = {
           position: point,
+          icon: {
+            path: google.maps.SymbolPath.FORWARD_CLOSED_ARROW,
+            scale: 4,
+            fillColor: "#1D72E6", //<-- I want to change this after creation
+            fillOpacity: 1,
+            strokeWeight: 1,
+            rotation: 0 //<-- I want to change this after creation
+          },
           map: mapObj
         }
 
